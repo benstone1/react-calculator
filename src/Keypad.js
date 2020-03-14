@@ -11,8 +11,8 @@ class Keypad extends React.Component {
     }
     render() {
         return (
-            <div>
-                {[...Array(10).keys(), ...['+','-','=']].slice(1).map(val => (
+            <div className = 'keypadDiv'>
+                {[...Array(10).keys(), ...['+','-','=']].map(val => (
                     <button key={val} name={val} onClick={this.buttonPressed}>{val}</button>                    
                 ))}
             </div>

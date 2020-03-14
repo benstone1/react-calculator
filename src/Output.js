@@ -4,9 +4,16 @@ class Output extends React.Component {
     render() {
         return (
             <div>
-                <p>{this.props.result}</p>
+                <p>{this.getDisplayText()}</p>
             </div>
         )
+    }
+    getDisplayText = () => {
+        if (this.props.result) {
+            return this.props.result
+        } else {
+            return "0"
+        }
     }
 }
 
